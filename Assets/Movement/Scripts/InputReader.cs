@@ -27,6 +27,7 @@ namespace Movement
                 Vector3 fixedMovement = new Vector3(moveInput.x, 0.0f, moveInput.y);
 
                 characterMovement.Move(fixedMovement);
+                
             }
         }
     }
