@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public float speed = 10;
+    public float speed = 2;
     private Vector3 _desiredDirection;
     public float rotationSpeed = 15;
+
+    public float CurrentSpeed
+    {
+        get
+        {
+            return _desiredDirection.magnitude * speed;
+        }
+    }
 
     public void Move(Vector3 direction)
     {
         _desiredDirection = direction;
     }
-
 
     private void Update()
     {
